@@ -4,6 +4,7 @@
     "slug": "qena-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
+    "image": "./assets/splash.png",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
