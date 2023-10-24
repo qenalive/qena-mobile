@@ -4,7 +4,8 @@
 
 ## Introduction 🌍
 Welcome to the QenA Mobile! This project aims to create a free version of an interactive question and answer app. It is intended to be used mostly in classroom settings especially in higher education.
-![IMG](C:\Users\jwbog\OneDrive\Desktop\qena-mobile\assets\logo_padding.png)
+
+![Alt text](image.png)
 ## Tech that we used 🛠️
 <div style="display:flex">
 <img alt="Python" src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
