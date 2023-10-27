@@ -9,8 +9,8 @@ export default function App() {
     <ThemeProvider>
       <NativeRouter>
         <Routes>
-          <Route path="/" Component={LoginPage} />
-          <Route path="/dashboard" Component={HomePage} />
+          <Route path="/dashboard" Component={LoginPage} />
+          <Route path="/" Component={HomePage} />
         </Routes>
       </NativeRouter>
     </ThemeProvider>
