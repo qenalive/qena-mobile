@@ -1,5 +1,4 @@
-import { Text, View } from "react-native";
-import { Button, Icon, Div, Image } from "react-native-magnus";
+import { Button, Text, Div, Image } from "react-native-magnus";
 
 export default function Login() {
   return (
@@ -25,7 +24,7 @@ export default function Login() {
         m={10}
       >
         {/* <Image source={}></Image> */}
-        Signin with NetId
+        Sign in with NetId
       </Button>
       <Text style={{ color: "white" }}>or</Text>
       <Button

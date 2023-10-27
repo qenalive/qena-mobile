@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { Text, Div } from "react-native-magnus";
 
 export default function HomePage() {
   return (
-    <View>
-      <Text>Home Page</Text>
-    </View>
+    <Div>
+      <Text>Dashboard</Text>
+    </Div>
   );
 }
