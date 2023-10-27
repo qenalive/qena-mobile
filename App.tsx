@@ -1,37 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Switch, Text, View } from 'react-native';
 import { NativeRouter, Route, Routes } from "react-router-native";
-import HomePage from './pages/Home';
-import LoginPage from './pages/Login';
-import * as React from 'react'
-
-// 1. import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react'
-
-
-
-
+import HomePage from "./pages/Home";
+import LoginPage from "./pages/Login";
+import * as React from "react";
+import { ThemeProvider } from "react-native-magnus";
 
 export default function App() {
   return (
-    <ChakraProvider>
+    <ThemeProvider>
       <NativeRouter>
-        <Switch>
-          <Routes>
-            <Route path="/" Component={HomePage} />
-            <Route path="/main" Component={LoginPage} />
-          </Routes>
-        </Switch>
+        <Routes>
+          <Route path="/" Component={LoginPage} />
+          <Route path="/dashboard" Component={HomePage} />
+        </Routes>
       </NativeRouter>
-    </ChakraProvider>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

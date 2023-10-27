@@ -1,101 +1,47 @@
-import { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Stack,
-  Text,
-  chakra,
-  useColorMode,
-  Image,
-  Drawer,
-  DrawerContent,
-} from "@chakra-ui/react";
+import { Text, View } from "react-native";
+import { Button, Icon, Div, Image } from "react-native-magnus";
 
-
-interface LoginProps {
-    onLogin: Function;
-}
-
-
-export default function Login ({ onLogin }: LoginProps) {
-    const [isMobile, setIsMobile] = useState(false);
-
-
-    return (
-    <>
-      {isMobile ? (
-        <></>
-      ) : (
-        <Box
-          width="100vw"
-          height="100vh"
-          justifyContent="center"
-          zIndex="1000"
-          position="absolute"
-          display="flex"
-          pl="30vw"
-          py="15vh"
-        >
-          <Image src={"gifs/Question.gif"} />
-        </Box>
-      )}
-     
-      <Drawer isOpen={true} onClose={() => {}} placement="left">
-        <DrawerContent>
-          <Box bg="black" height={"100%"} width={"100%"}>
-            <Image src="logo_padding.png" alt="Logo" width={"100%"} />
-            <Stack
-              flexDir="column"
-              mb="2"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Box>
-                <form>
-                  <Stack spacing={4} p="20px">
-                    <Button
-                     
-                      w={"full"}
-                      maxW={"md"}
-                      variant={"solid"}
-                      bg={"blue"}
-                      _hover={{ bg: "grey" }}
-                      color="white"
-                    >
-                      <Box pr="1">
-                        <Image
-                          src="/husky_logo.svg"
-                          alt="Custom Icon"
-                          boxSize="20px"
-                        />
-                      </Box>
-                      <Text>&nbsp;Sign in with NetID</Text>
-                    </Button>
-                    <p
-                      style={{
-                        color: "white",
-                        marginTop: "-2px",
-                        marginLeft: "135px",
-                      }}
-                    >
-                      (recommended)
-                    </p>
-                   
-                      <Center>
-                        <Text>Sign in with Google</Text>
-                      </Center>
-                   
-                  </Stack>
-                </form>
-              </Box>
-            </Stack>
-          </Box>
-        </DrawerContent>
-      </Drawer>
-    </>
+export default function Login() {
+  return (
+    <Div
+      style={{
+        backgroundColor: "black",
+        height: "100%",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Image source={require("../assets/logo_padding.png")} h={300} w={300} />
+      <Button
+        onPress={() => {
+          // handle sign in logic
+        }}
+        bg="blue"
+        alignSelf="center"
+        fontSize={20}
+        fontWeight="bold"
+        w={300}
+        m={10}
+      >
+        {/* <Image source={}></Image> */}
+        Signin with NetId
+      </Button>
+      <Text style={{ color: "white" }}>or</Text>
+      <Button
+        onPress={() => {
+          // handle sign in with Google logic
+        }}
+        bg="red"
+        alignSelf="center"
+        fontSize={20}
+        fontWeight="bold"
+        w={300}
+        m={10}
+        mb={150}
+      >
+        Sign in with Google
+      </Button>
+    </Div>
   );
 }
-
-
