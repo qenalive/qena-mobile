@@ -1,6 +1,9 @@
 import { Button, Text, Div, Image } from "react-native-magnus";
+import { useNavigate } from "react-router-native";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   return (
     <Div
       style={{
@@ -14,7 +17,7 @@ export default function Login() {
       <Image source={require("../assets/logo_padding.png")} h={300} w={300} />
       <Button
         onPress={() => {
-          // handle sign in logic
+          navigate("/dashboard");
         }}
         bg="blue"
         alignSelf="center"
