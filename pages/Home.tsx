@@ -1,4 +1,12 @@
-import { Text, Div, Button, Header, Icon, Image, Input } from "react-native-magnus";
+import {
+  Text,
+  Div,
+  Button,
+  Header,
+  Icon,
+  Image,
+  Input,
+} from "react-native-magnus";
 
 export default function HomePage() {
   return (
@@ -17,7 +25,11 @@ export default function HomePage() {
         p="lg"
         alignment="left"
         prefix={
-          <Image source={require('../assets/logo_padding.png')} w={60} h={60}></Image>
+          <Image
+            source={require("../assets/logo_padding.png")}
+            w={60}
+            h={60}
+          ></Image>
         }
         suffix={
           <Button bg="transparent">
@@ -38,7 +50,7 @@ export default function HomePage() {
           <Input mt={-60} mb={10} w={250}>
             yes
           </Input>
-          
+
           <Div flexDir="row">
             <Icon
               name="bell"
