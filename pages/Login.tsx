@@ -29,6 +29,20 @@ export default function Login() {
         {/* <Image source={}></Image> */}
         Sign in with NetId
       </Button>
+      <Button
+        onPress={() => {
+          navigate("/session");
+        }}
+        bg="blue"
+        alignSelf="center"
+        fontSize={20}
+        fontWeight="bold"
+        w={300}
+        m={10}
+      >
+        {/* <Image source={}></Image> */}
+        Go to Session
+      </Button>
       <Text style={{ color: "white" }}>or</Text>
       <Button
         onPress={() => {
